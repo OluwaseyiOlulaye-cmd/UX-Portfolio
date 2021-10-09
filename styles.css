@@ -1,0 +1,380 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+
+    background-color: #EEEEEE;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 100%;
+    font-family: 'Poppins, sans-serif';	
+    
+}
+
+:root {
+    --primary: #540E6C;
+    --spacing: 4rem;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+header {
+    height: 100vh;
+    width: 100%;
+    /*position: relative;*/
+}
+
+nav {
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: relative;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem
+}  
+ 
+.logo {
+    padding-top: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+.nav-links {
+    text-align: right;
+    padding: 10px 30px;   
+
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 30px 10px;
+}
+
+.nav-links ul li a {
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--primary);
+}
+.nav-links a:hover {
+    color: rgb(235, 166, 235);
+    opacity: 0.5;
+}
+
+h1 {
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    font-size: 4vw;
+    font-weight: bold;
+    line-height: 1.4em;
+}
+h1 span{
+    color: var(--primary)
+}
+
+.hero p {
+    margin-bottom: 2em;
+    line-height: 1.4em;
+    font-size: 2vw;
+    text-align: center;
+}
+.button {
+    /*
+    margin-bottom: 1rem;
+    */
+    padding: 1rem;
+    display: inline-block;
+    width: max-content;
+    border: 3px solid var(--primary);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.button:hover {
+    color: white;
+    background-color: var(--primary);
+}
+/*.projects {
+    padding: var(--spacing);*/
+
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.projects-image {
+    justify-self: center;
+    padding: 3%;
+}
+.projects-image {
+    border-radius: 15px;
+    box-shadow: 0 4px 6px 0 rgba(34, 60, 80, .16);
+    transition: all ease-in-out .3s;
+}
+.project-image-wrapper {
+    justify-self: center;
+    padding: 5%;
+    position: relative;
+}
+
+
+.project-image-wrapper:hover > h3 {
+    visibility: visible;
+}
+.project-image-wrapper > h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    visibility: hidden;
+    z-index: 2;
+    transition: all ease-in-out .3s;
+}
+
+.foot {
+    padding: var(--spacing)
+}
+
+
+/*About Page*/
+
+.about {
+    padding: var(--spacing);
+}
+
+h2 {
+    margin-bottom: var(--spacing);
+    text-align: left;
+    font-size: 3vw;
+    font-weight: bold;
+    padding-top: var(--spacing)
+}
+
+p {
+    margin-bottom: 2em;
+    line-height: 1.4em;
+    font-size: 18px;
+}
+
+.about-container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.about-img {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto var(--spacing);
+    filter: grayscale(100%);
+}
+
+.about img:hover {
+    filter: grayscale(0);
+}
+
+@media (min-width: 800px) {
+    .about-container {
+        display: flex;
+    }
+    
+    .about-text {
+        margin-left: var(--spacing);
+    }
+}
+.social {
+    display: flex;
+    justify-content: center;
+}
+.social-item {
+    margin: 0 2rem;
+}
+.social-link {
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: no-repeat;
+    background-size: 25px;
+}
+
+.foot ul li {
+    list-style: none;
+}
+.linkedin {
+    background-image: url(images/linkedin-svg.svg);
+}
+
+.twitter {
+    background-image: url(images/twitter1.svg);
+}
+.behance {
+    background-image: url(images/github.png);
+}
+
+.social-link:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+/*Portfolio case study page*/
+.portfolio span {
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 1.4em;
+    
+    
+}
+.hero1 {
+    padding-top: 3rem; 
+    padding-bottom: var(--spacing);  
+}
+
+
+.hero1 img {
+    padding-left: var(--spacing);
+    padding-bottom: var(--spacing);
+}
+.hero1 p {
+    font-size: 18px;
+}
+
+h3 {
+    margin-bottom: 2rem;
+    text-align: left;
+    font-size: 2vw;
+    font-weight: bold;
+}
+
+h4 {
+    margin-bottom: 2rem;
+    text-align: left;
+    font-size: 24px;
+    font-weight: lighter; 
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+/*
+-------------------------------------------------------------------------------------------------
+Grid
+-------------------------------------------------------------------------------------------------
+*/
+
+.col-1-3 {
+    float: left;
+    width: 33.33%;
+    
+
+}
+.grid {
+    padding-top: 2rem;
+    margin-right: 5%;
+    padding-right: 5px;
+
+}
+/*clear floats*/
+
+.grid:after {
+	content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 650px) {
+    .col-1-3 {
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width: 650px) {
+    .project-grid {
+        grid-template-columns: 100%;
+    }
+    
+}
+@media screen and (max-width: 650px) {
+    .list-grid {
+        grid-template-columns: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 650px) {
+    .list-grid-acc {
+        grid-template-columns: 100%;
+    }
+    
+}
+@media only screen and (max-width: 480px) {
+    img {
+      width: 100%;
+    }
+  }
+
+.list-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.list1 img, .list2 img {
+    padding-top: 2rem;
+    margin: 5%;
+    padding-bottom: var(--spacing);
+      
+}
+.list-grid-img{
+    padding-top: 10px;
+    padding-bottom: 2rem;
+      
+}
+.list1, .list2,.list3 {
+    padding-top: 2rem;
+    margin-right: 5%;
+    padding-bottom: var(--spacing);
+}
+
+.list-grid-acc {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+}
+.list-grid-acc li {
+    margin-bottom: 2rem;
+    text-align: left;
+    font-size: 24px;
+    font-weight: lighter; 
+}
+.foot p {
+    text-align: center;
+    padding-top: var(--spacing);
+}
